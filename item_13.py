@@ -36,25 +36,29 @@ import json
 
 def load_json_key(data, key):
     try:
-        result_dict = json.loads(data)  # May raise ValueError
+        result_dict = "asda"  # May raise ValueError
     except ValueError as e:
         raise KeyError from e
     else:
-        return result_dict[key]         # May raise KeyError
-
+        return result_dict
+    finally:
+        print('finally')
 # JSON decode successful
-assert load_json_key('{"foo": "bar"}', 'foo') == 'bar'
+# assert load_json_key('{"foo": "bar"}', 'foo') == 'bar'
 try:
     load_json_key('{"foo": "bar"}', 'does not exist')
-    assert False
+    # assert False
 except KeyError:
+    print("KeyErro")
     pass  # Expected
 
 # JSON decode fails
 try:
-    load_json_key('{"foo": bad payload', 'foo')
-    assert False
+    a = load_json_key('{"foo": bad payload', 'foo')
+    print(a)
+    # assert False
 except KeyError:
+    print("KeyErro2")
     pass  # Expected
 
 

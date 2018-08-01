@@ -7,6 +7,7 @@ def myEnumerate(collection):
     it = iter(collection)
     print("it type: ", type(it))
     while 1:
+        print("!!!!!! yield")
         yield (i, it.__next__())
         i += 1
 
@@ -15,3 +16,7 @@ if __name__ == '__main__':
     for i, flavor in myEnumerate(flavor_list):
         print("%d: %s" % (i + 1, flavor))
 
+
+class AA:
+    def __eq__(self, other):
+        pass

@@ -24,15 +24,14 @@ from sys import stdout as STDOUT
 def remainder(number, divisor):
     return number % divisor
 
-assert remainder(20, 7) == 6
 
+assert remainder(20, 7) == 6
 
 # Example 2
 remainder(20, 7)
 remainder(20, divisor=7)
 remainder(number=20, divisor=7)
 remainder(divisor=7, number=20)
-
 
 # Example 3
 try:
@@ -43,7 +42,6 @@ except:
     logging.exception('Expected')
 else:
     assert False
-
 
 # Example 4
 try:
@@ -57,6 +55,7 @@ else:
 # Example 5
 def flow_rate(weight_diff, time_diff):
     return weight_diff / time_diff
+
 
 weight_diff = 0.5
 time_diff = 3
@@ -98,7 +97,6 @@ pounds_per_hour = flow_rate(weight_diff, time_diff,
                             period=3600, units_per_kg=2.2)
 print(pounds_per_hour)
 assert pounds_per_hour == 1320.0
-
 
 # Example 12
 pounds_per_hour = flow_rate(weight_diff, time_diff, 3600, 2.2)

@@ -27,7 +27,7 @@ from datetime import datetime
 def log(message, when=datetime.now()):
     print('%s: %s' % (when, message))
 
-log('Hi there!')
+log("ㅁㄴㅇㅁㅇ")
 sleep(0.1)
 log('Hi again!')
 

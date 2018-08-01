@@ -69,5 +69,5 @@ def log(sequence, message, *values):
         values_str = ', '.join(str(x) for x in values)
         print('%s: %s: %s' % (sequence, message, values_str))
 
-log(1, 'Favorites', 7, 33)      # New usage is OK
+log(1, 'Favorites', 7, 33, 14)      # New usage is OK
 log('Favorite numbers', 7, 33)  # Old usage breaks

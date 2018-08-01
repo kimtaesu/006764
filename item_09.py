@@ -37,9 +37,6 @@ print(it)
 
 
 # Example 3
-print(next(it))
-print(next(it))
-
 
 # Example 4
 roots = ((x, x**0.5) for x in it)
